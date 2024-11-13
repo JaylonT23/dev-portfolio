@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DevPortfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+    <h1><%= link_to "Dev Portfolio", root_path %></h1>
+    <nav>
+      <%= link_to "Home", root_path %> |
+      <%= link_to "About", about_path %> |
+      <%= link_to "Projects", work_path %> |
+      <%= link_to "Contact", contact_path %>
+    </nav>
+  </header>
+    <%= yield %>
+    <footer>
+    <p>&copy; <%= Date.today.year %> Jaylon Taylor. All rights are reserved. Any false information will be delt with.</p>
+  </footer>
+
+  </body>
+</html>
